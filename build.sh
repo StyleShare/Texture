@@ -225,7 +225,7 @@ cocoapods-lint|all)
 cocoapods-lint-default-subspecs)
     echo "Verifying that default subspecs lint."
 
-    for subspec in 'Core' 'PINRemoteImage' 'Video' 'MapKit' 'AssetsLibrary' 'Photos'; do
+    for subspec in 'Core' 'PINRemoteImage' 'Video' 'MapKit' 'Photos'; do
         echo "Verifying that $subspec subspec lints."
 
         lint_subspec $subspec

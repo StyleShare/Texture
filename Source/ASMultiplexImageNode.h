@@ -234,7 +234,7 @@ didFinishDownloadingImageWithIdentifier:(ASImageIdentifier)imageIdentifier
  * @abstract An image URL for the specified identifier.
  * @param imageNode The sender.
  * @param imageIdentifier The identifier for the image that will be downloaded.
- * @discussion Supported URLs include HTTP, HTTPS, AssetsLibrary, and FTP URLs as well as Photos framework URLs (see note).
+ * @discussion Supported URLs include HTTP, HTTPS and FTP URLs as well as Photos framework URLs (see note).
  *
  * If the image is already available to the data source, it should be provided via <[ASMultiplexImageNodeDataSource
  * multiplexImageNode:imageForImageIdentifier:]> instead.

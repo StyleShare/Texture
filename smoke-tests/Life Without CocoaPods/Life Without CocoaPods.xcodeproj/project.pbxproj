@@ -13,7 +13,6 @@
 		0589691B1ABCE0E80059CE2A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 058969181ABCE0E80059CE2A /* Default-568h@2x.png */; };
 		0589691C1ABCE0E80059CE2A /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 058969191ABCE0E80059CE2A /* Default-667h@2x.png */; };
 		0589691D1ABCE0E80059CE2A /* Default-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0589691A1ABCE0E80059CE2A /* Default-736h@3x.png */; };
-		0589692A1ABCE17C0059CE2A /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 058969291ABCE17C0059CE2A /* AssetsLibrary.framework */; };
 		0589692C1ABCE1820059CE2A /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0589692B1ABCE1820059CE2A /* Photos.framework */; };
 		92DD2FEC1BF4D8BB0074C9DD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DD2FEB1BF4D8BB0074C9DD /* MapKit.framework */; };
 		F729B8BB1D2E176700C9EDBC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F729B8BA1D2E176700C9EDBC /* main.m */; };
@@ -86,7 +85,6 @@
 		058969181ABCE0E80059CE2A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		058969191ABCE0E80059CE2A /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
 		0589691A1ABCE0E80059CE2A /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
-		058969291ABCE17C0059CE2A /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		0589692B1ABCE1820059CE2A /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		92DD2FEB1BF4D8BB0074C9DD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F729B8B71D2E176700C9EDBC /* Life With Frameworks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Life With Frameworks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,7 +103,6 @@
 				F7CE6CB61D2CE00800BE4C15 /* AsyncDisplayKit.framework in Frameworks */,
 				92DD2FEC1BF4D8BB0074C9DD /* MapKit.framework in Frameworks */,
 				0589692C1ABCE1820059CE2A /* Photos.framework in Frameworks */,
-				0589692A1ABCE17C0059CE2A /* AssetsLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,7 +121,6 @@
 			children = (
 				92DD2FEB1BF4D8BB0074C9DD /* MapKit.framework */,
 				0589692B1ABCE1820059CE2A /* Photos.framework */,
-				058969291ABCE17C0059CE2A /* AssetsLibrary.framework */,
 				F7CE6CA51D2CDFFB00BE4C15 /* AsyncDisplayKit.xcodeproj */,
 				058968F11ABCE06E0059CE2A /* Life Without CocoaPods */,
 				F729B8B81D2E176700C9EDBC /* Life With Frameworks */,

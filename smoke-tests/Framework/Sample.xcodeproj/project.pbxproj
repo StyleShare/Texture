@@ -66,7 +66,6 @@
 		05DDD8DA19D2336300013C30 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		34566C9B1BC1202A00715E6B /* AsyncDisplayKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AsyncDisplayKit.xcodeproj; path = ../../AsyncDisplayKit.xcodeproj; sourceTree = "<group>"; };
 		34566CAF1BC1208200715E6B /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
-		34566CB11BC1208700715E6B /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		6C5053D919EE266A00E385DE /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = SOURCE_ROOT; };
 		6C5053DA19EE266A00E385DE /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -127,7 +126,6 @@
 		092C2001FE124604891D6E90 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				34566CB11BC1208700715E6B /* AssetsLibrary.framework */,
 				34566CAF1BC1208200715E6B /* Photos.framework */,
 			);
 			name = Frameworks;

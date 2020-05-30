@@ -9,6 +9,6 @@ Travis CI builds will fail.  To escape from such dire straits:
   AsyncDisplayKit target.  Note that this smoke test will only fail if you
   remembered to add your new file to the umbrella helper.
 
-* If you added a new framework dependency (like AssetsLibrary or Photos), add
+* If you added a new framework dependency (like Photos), add
   it to this project's Link Binary With Libraries build phase and update the
   project README (both README.md and docs/index.md).

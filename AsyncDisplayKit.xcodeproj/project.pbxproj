@@ -316,7 +316,6 @@
 		B35062591B010F070018CF92 /* ASBaseDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 058D0A44195D058D00B7D73C /* ASBaseDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B350625C1B010F070018CF92 /* ASLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 0516FA3B1A15563400B4EBED /* ASLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B350625D1B0111740018CF92 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 051943141A1575670030A7D0 /* Photos.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		B350625E1B0111780018CF92 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 051943121A1575630030A7D0 /* AssetsLibrary.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		BB5FC3CE1F9BA689007F191E /* ASNavigationControllerTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = BB5FC3CD1F9BA688007F191E /* ASNavigationControllerTests.mm */; };
 		BB5FC3D11F9C9389007F191E /* ASTabBarControllerTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = BB5FC3D01F9C9389007F191E /* ASTabBarControllerTests.mm */; };
 		C018DF21216BF26700181FDA /* ASAbstractLayoutController+FrameworkPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = C018DF20216BF26600181FDA /* ASAbstractLayoutController+FrameworkPrivate.h */; };
@@ -538,7 +537,6 @@
 		0516FA3B1A15563400B4EBED /* ASLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASLog.h; sourceTree = "<group>"; };
 		0516FA3E1A1563D200B4EBED /* ASMultiplexImageNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASMultiplexImageNode.h; sourceTree = "<group>"; };
 		0516FA3F1A1563D200B4EBED /* ASMultiplexImageNode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ASMultiplexImageNode.mm; sourceTree = "<group>"; };
-		051943121A1575630030A7D0 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		051943141A1575670030A7D0 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		052EE0651A159FEF002C6279 /* ASMultiplexImageNodeTests.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ASMultiplexImageNodeTests.mm; sourceTree = "<group>"; };
 		052EE06A1A15A0D8002C6279 /* TestResources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TestResources; sourceTree = "<group>"; };
@@ -1098,7 +1096,6 @@
 				CC36C191218B841A00232F23 /* CoreText.framework in Frameworks */,
 				CC36C18F218B841600232F23 /* UIKit.framework in Frameworks */,
 				92DD2FE61BF4D05E0074C9DD /* MapKit.framework in Frameworks */,
-				B350625E1B0111780018CF92 /* AssetsLibrary.framework in Frameworks */,
 				B350625D1B0111740018CF92 /* Photos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1164,7 +1161,6 @@
 				CC36C18E218B841600232F23 /* UIKit.framework */,
 				92DD2FE51BF4D05E0074C9DD /* MapKit.framework */,
 				051943141A1575670030A7D0 /* Photos.framework */,
-				051943121A1575630030A7D0 /* AssetsLibrary.framework */,
 				058D09AF195D04C000B7D73C /* Foundation.framework */,
 				058D09BD195D04C000B7D73C /* XCTest.framework */,
 				058D09C0195D04C000B7D73C /* UIKit.framework */,
@@ -2278,15 +2274,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AsyncDisplayKitTests/Pods-AsyncDisplayKitTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/OCMock/OCMock.framework",
-				"${BUILT_PRODUCTS_DIR}/iOSSnapshotTestCase/FBSnapshotTestCase.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AsyncDisplayKitTests/Pods-AsyncDisplayKitTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OCMock.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AsyncDisplayKitTests/Pods-AsyncDisplayKitTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -2608,7 +2601,10 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/TestHost/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2625,7 +2621,10 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				INFOPLIST_FILE = Tests/TestHost/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2671,7 +2670,6 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
-					"AS_USE_ASSETS_LIBRARY=1",
 					"AS_USE_MAPKIT=1",
 					"AS_USE_PHOTOS=1",
 					"AS_USE_VIDEO=1",
@@ -2805,7 +2803,11 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = Source/AsyncDisplayKit.modulemap;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_CFLAGS = (
@@ -2837,7 +2839,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = Source/AsyncDisplayKit.modulemap;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_CFLAGS = (
@@ -2934,7 +2940,10 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				INFOPLIST_FILE = Tests/TestHost/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2959,7 +2968,11 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "PROFILE=1";
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = Source/AsyncDisplayKit.modulemap;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_CFLAGS = (
